@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://qss1tso47pqb"]
 
-[ext_resource type="Script" path="res://slider_option.gd" id="1_gd56u"]
+[ext_resource type="Script" path="res://scripts/slider_option.gd" id="1_gd56u"]
 [ext_resource type="Texture2D" uid="uid://wt2dqkppucta" path="res://icons/Cupcake icon.svg" id="2_gd56u"]
 [ext_resource type="Texture2D" uid="uid://b5ekeu5v4upff" path="res://icons/Apple Icon.svg" id="3_osyly"]
 

@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6odmkpsmvied"]
+
+[ext_resource type="Script" path="res://scripts/simulation.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dmmrlmxp8takm" path="res://scenes/packaging_option.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://capnrof4hall6" path="res://scenes/recycling_option.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://qss1tso47pqb" path="res://scenes/food_option.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://si0idodylfyn" path="res://scenes/ProjectedOutcomeLabel.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bvgwdqpyvod2k" path="res://scenes/solar_panel_option.tscn" id="6_tefeu"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="PackagingOption" parent="." instance=ExtResource("2_0xm2m")]
+offset_left = 54.0
+offset_top = 297.0
+offset_right = 54.0
+offset_bottom = 297.0
+eco_mult = 0.2
+profit_mult = 0.1
+
+[node name="RecyclingOption" parent="." instance=ExtResource("3_h2yge")]
+offset_left = 55.0
+offset_top = 417.0
+offset_right = 55.0
+offset_bottom = 417.0
+eco_mult = 0.6
+profit_mult = 0.4
+
+[node name="FoodOption" parent="." instance=ExtResource("4_1bvp3")]
+offset_left = 55.0
+offset_top = 544.0
+offset_right = 55.0
+offset_bottom = 544.0
+eco_mult = 0.3
+profit_mult = 0.3
+
+[node name="ProjectedOutcomeLabel" parent="." instance=ExtResource("5_lquwl")]
+offset_left = 78.0
+offset_top = 758.0
+offset_right = 78.0
+offset_bottom = 758.0
+
+[node name="SolarPanelOption" parent="." instance=ExtResource("6_tefeu")]
+offset_left = 638.0
+offset_top = 308.0
+offset_right = 638.0
+offset_bottom = 308.0

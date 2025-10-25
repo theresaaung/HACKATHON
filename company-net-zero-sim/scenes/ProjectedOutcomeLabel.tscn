@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://si0idodylfyn"]
 
-[ext_resource type="Script" uid="uid://bxbqr0vvtwldp" path="res://projected_outcome_label.gd" id="1_4qua3"]
+[ext_resource type="Script" uid="uid://bxbqr0vvtwldp" path="res://scripts/projected_outcome_label.gd" id="1_4qua3"]
 
 [node name="ProjectedOutcomeLabel" type="Control"]
 layout_mode = 3

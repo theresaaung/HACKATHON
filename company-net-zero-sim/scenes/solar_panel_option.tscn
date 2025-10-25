@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvgwdqpyvod2k"]
+
+[ext_resource type="Texture2D" uid="uid://bp3hv0xd8tmbq" path="res://icons/Solar Panel Icon.svg" id="1_36usf"]
+[ext_resource type="Script" uid="uid://d4gtsgjopmq08" path="res://scenes/solar_panel_option.gd" id="1_miilf"]
+
+[node name="SolarPanelOption" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_miilf")
+
+[node name="SolarPanelIcon" type="Sprite2D" parent="."]
+position = Vector2(120, 116)
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("1_36usf")
+
+[node name="SolarPanelPriceLabel" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 36.0
+offset_top = 127.0
+offset_right = 350.0
+offset_bottom = 151.0
+text = "Solar Panel: £5 000"
+
+[node name="SolarPanelEcoLabel" type="Label" parent="."]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 0
+offset_left = 36.0
+offset_top = 151.0
+offset_right = 350.0
+offset_bottom = 174.0
+text = "Eco: + 2%"
+
+[node name="SolarPanelQuantityLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 83.0
+offset_right = 593.0
+offset_bottom = 106.0
+text = "Amount: 0"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 30.0
+offset_right = 360.0
+offset_bottom = 75.0
+text = "BUY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

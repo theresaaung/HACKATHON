@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://capnrof4hall6"]
 
-[ext_resource type="Script" path="res://slider_option.gd" id="1_kbxti"]
+[ext_resource type="Script" path="res://scripts/slider_option.gd" id="1_kbxti"]
 [ext_resource type="Texture2D" uid="uid://lavrehuvmvug" path="res://icons/Recycling Logo.svg" id="2_kbxti"]
 [ext_resource type="Texture2D" uid="uid://bpfxj0oo7dh8a" path="res://icons/Bin Icon.svg" id="3_kbxti"]
 

@@ -6,6 +6,8 @@ extends Node2D
 @onready var recycling_option: Control = $RecyclingOption
 @onready var food_option: Control = $FoodOption
 
+@onready var solar_panel_option: Control = $SolarPanelOption
+
 @onready var projected_outcome_label: Control = $ProjectedOutcomeLabel
 
 
@@ -14,8 +16,6 @@ extends Node2D
 
 var total_eco_percent: float
 var total_profit_percent: float
-
-
 
 
 
@@ -33,5 +33,7 @@ func _process(delta: float) -> void:
 
 
 func calculate_total_percents():
-	total_eco_percent = packaging_option.get_eco_percent() + recycling_option.get_eco_percent() + food_option.get_eco_percent()
+	
+	
+	total_eco_percent = packaging_option.get_eco_percent() + recycling_option.get_eco_percent() + food_option.get_eco_percent() + (solar_panel_option.get_eco_percent() * solar_panel_option.get_number_of_panels())
 	total_profit_percent = packaging_option.get_profit_percent() + recycling_option.get_profit_percent() + food_option.get_profit_percent()
