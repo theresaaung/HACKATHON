@@ -2,6 +2,7 @@ extends Control
 
 @onready var eco_label: Label = $EcoLabel
 @onready var profit_label: Label = $ProfitLabel
+@onready var auido_click: AudioStreamPlayer = $auido_click
 
 
 # Called when the node enters the scene tree for the first time.

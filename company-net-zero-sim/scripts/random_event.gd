@@ -6,7 +6,8 @@ extends Node2D
 @onready var notify_label: Label = $PanelContainer/Label               
 @onready var feed_scroll: ScrollContainer = $FeedScroll
 @onready var feed: VBoxContainer = $FeedScroll/Feed
-@onready var click: AudioStreamPlayer2D = $Click
+@onready var auido_click: AudioStreamPlayer = $auido_click
+
 
 var messages := [
 	"The local eco farm that you have been sourcing food from has got mad cow disease! Results in lower profits from less food.",
@@ -27,7 +28,7 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	_show_notification(_random_message())
-	click.play()
+	auido_click.play()
 
 func _random_message() -> String:
 	return messages.pick_random()

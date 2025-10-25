@@ -1,4 +1,5 @@
 extends Control
+@onready var auido_click: AudioStreamPlayer = $auido_click
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,8 +13,10 @@ func _process(delta: float) -> void:
 
 
 func _on_exitbutton_pressed() -> void:
+	auido_click.play()
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
 
 
 func _on_nextbutton_pressed() -> void:
+	auido_click.play()
 	get_tree().change_scene_to_file("res://Menu/intro2.tscn")
