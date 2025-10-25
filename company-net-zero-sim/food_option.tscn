@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://capnrof4hall6"]
+[gd_scene load_steps=4 format=3 uid="uid://qss1tso47pqb"]
 
-[ext_resource type="Script" path="res://slider_option.gd" id="1_kbxti"]
-[ext_resource type="Texture2D" uid="uid://lavrehuvmvug" path="res://icons/Recycling Logo.svg" id="2_kbxti"]
-[ext_resource type="Texture2D" uid="uid://bpfxj0oo7dh8a" path="res://icons/Bin Icon.svg" id="3_kbxti"]
+[ext_resource type="Script" path="res://slider_option.gd" id="1_gd56u"]
+[ext_resource type="Texture2D" uid="uid://wt2dqkppucta" path="res://icons/Cupcake icon.svg" id="2_gd56u"]
+[ext_resource type="Texture2D" uid="uid://b5ekeu5v4upff" path="res://icons/Apple Icon.svg" id="3_osyly"]
 
-[node name="RecyclingOption" type="Control"]
+[node name="FoodOption" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,15 +13,16 @@ offset_right = -1476.0
 offset_bottom = -908.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_kbxti")
+script = ExtResource("1_gd56u")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 169.0
+offset_left = 152.0
 offset_top = 16.0
-offset_right = 278.0
+offset_right = 293.0
 offset_bottom = 39.0
-text = "Eco Recycling"
+text = "Eco Food Sourcing"
+horizontal_alignment = 1
 
 [node name="Slider" type="HSlider" parent="."]
 layout_mode = 0
@@ -49,14 +50,14 @@ offset_right = 221.64
 offset_bottom = 110.64
 text = "0% Profit"
 
-[node name="RecycleIcon" type="Sprite2D" parent="."]
-position = Vector2(374.99997, 69)
-scale = Vector2(0.085, 0.085)
-texture = ExtResource("2_kbxti")
+[node name="CupcakeIcon" type="Sprite2D" parent="."]
+position = Vector2(67, 70)
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("2_gd56u")
 
-[node name="BinIcon" type="Sprite2D" parent="."]
-position = Vector2(80, 57)
-scale = Vector2(0.16, 0.16)
-texture = ExtResource("3_kbxti")
+[node name="AppleIcon" type="Sprite2D" parent="."]
+position = Vector2(386, 69)
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("3_osyly")
 
 [connection signal="value_changed" from="Slider" to="." method="_on_slider_value_changed"]

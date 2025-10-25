@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://si0idodylfyn"]
+
+[ext_resource type="Script" uid="uid://bxbqr0vvtwldp" path="res://projected_outcome_label.gd" id="1_4qua3"]
+
+[node name="ProjectedOutcomeLabel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1726.0
+offset_bottom = -895.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4qua3")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0004583319
+anchor_top = 0.00014814801
+anchor_right = 0.109541684
+anchor_bottom = 0.021148149
+offset_left = 0.87999725
+offset_top = -0.15999985
+offset_right = 0.67996216
+offset_bottom = 0.15999985
+text = "Projected Outcome (1 year)"
+metadata/_edit_use_anchors_ = true
+
+[node name="EcoLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 35.0
+offset_right = 186.0
+offset_bottom = 114.0
+text = "Eco Increase: "
+
+[node name="ProfitLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 73.0
+offset_right = 164.0
+offset_bottom = 152.0
+text = "Profit Increase:"
