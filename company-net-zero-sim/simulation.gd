@@ -4,6 +4,7 @@ extends Node2D
 
 @onready var packaging_option: Control = $PackagingOption
 @onready var recycling_option: Control = $RecyclingOption
+@onready var food_option: Control = $FoodOption
 
 # Slider variables
 
@@ -25,11 +26,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	calculate_total_percents()
-	eco.text = str(total_eco_percent)
-	profit.text = str(total_profit_percent)
+	eco.text = "Eco: " + str(total_eco_percent) + "%"
+	profit.text = "Profit: " + str(total_profit_percent) + "%"
 
 
 func calculate_total_percents():
-	#total_eco_percent = packaging_option.get_eco_percent() + recycling_option.get_eco_percent()
-	#total_profit_percent = packaging_option.get_profit_percent() + recycling_option.get_profit_percent()
-	pass
+	total_eco_percent = packaging_option.get_eco_percent() + recycling_option.get_eco_percent() + food_option.get_eco_percent()
+	total_profit_percent = packaging_option.get_profit_percent() + recycling_option.get_profit_percent() + food_option.get_profit_percent()
