@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2no0cj3pyx2n"]
+[gd_scene load_steps=17 format=3 uid="uid://b2no0cj3pyx2n"]
 
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_ci1se"]
 [ext_resource type="Script" uid="uid://v48ca0faxqfr" path="res://Menu/main_menu.gd" id="1_dtkyu"]
 [ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="2_dtkyu"]
 [ext_resource type="Script" uid="uid://gpm0v7rafntf" path="res://Menu/check_button.gd" id="4_ohgnh"]
+[ext_resource type="Texture2D" uid="uid://dcohp6s2rrwmb" path="res://Menu/switchOn.png" id="4_rw3mj"]
+[ext_resource type="Texture2D" uid="uid://bpb7lse5lrlfw" path="res://Menu/button.png" id="4_vv7ca"]
+[ext_resource type="Script" uid="uid://ceadqvfsdk6bt" path="res://Menu/music.gd" id="5_218iu"]
+[ext_resource type="Texture2D" uid="uid://utu501t4gvjk" path="res://Menu/switchOff.png" id="5_cn2sd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohgnh"]
 texture = ExtResource("1_ci1se")
@@ -59,6 +63,14 @@ corner_radius_bottom_left = 5
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rw3mj"]
 bg_color = Color(0.50731444, 0.50731444, 0.5073144, 0.92941177)
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ywk15"]
+color = Color(1, 1, 1, 1)
+thickness = 20
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ws7s4"]
+color = Color(0, 0.45882353, 0.9372549, 1)
+thickness = 20
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -78,7 +90,6 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ohgnh")
 
 [node name="MainButtons" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -150,7 +161,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_rw3mj")
 
-[node name="Label" type="Label" parent="Settings"]
+[node name="title" type="Label" parent="Settings"]
 layout_mode = 0
 offset_top = 7.0
 offset_right = 976.25
@@ -160,15 +171,6 @@ theme_override_font_sizes/font_size = 45
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="CheckButton" type="CheckButton" parent="Settings"]
-layout_mode = 0
-offset_left = 196.25
-offset_top = 153.0
-offset_right = 848.25
-offset_bottom = 308.0
-text = "Fullscreen"
-script = ExtResource("4_ohgnh")
 
 [node name="back" type="Button" parent="Settings"]
 custom_minimum_size = Vector2(0, 70)
@@ -188,8 +190,66 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ohgnh")
 toggle_mode = true
 text = "BACK"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -396.5625
+offset_top = -116.0
+offset_right = 396.5625
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dtkyu")
+theme_override_font_sizes/font_size = 30
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="HSlider" parent="Settings/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_icons/grabber = ExtResource("4_vv7ca")
+theme_override_icons/grabber_highlight = ExtResource("4_vv7ca")
+theme_override_icons/grabber_disabled = ExtResource("4_vv7ca")
+theme_override_styles/slider = SubResource("StyleBoxLine_ywk15")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_ws7s4")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_ws7s4")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("5_218iu")
+audio_bus_name = "Music"
+
+[node name="CheckButton" type="CheckButton" parent="Settings/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dtkyu")
+theme_override_font_sizes/font_size = 30
+theme_override_icons/checked = ExtResource("4_rw3mj")
+theme_override_icons/unchecked = ExtResource("5_cn2sd")
+theme_override_icons/checked_disabled = ExtResource("4_rw3mj")
+theme_override_icons/unchecked_disabled = ExtResource("5_cn2sd")
+theme_override_icons/checked_mirrored = ExtResource("4_rw3mj")
+theme_override_icons/unchecked_mirrored = ExtResource("5_cn2sd")
+theme_override_icons/checked_disabled_mirrored = ExtResource("4_rw3mj")
+theme_override_icons/unchecked_disabled_mirrored = ExtResource("5_cn2sd")
+text = "Fullscreen"
+script = ExtResource("4_ohgnh")
+
 [connection signal="pressed" from="MainButtons/start-button" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="MainButtons/settings-button" to="." method="_on_settingsbutton_pressed"]
 [connection signal="pressed" from="MainButtons/exit-button" to="." method="_on_exitbutton_pressed"]
-[connection signal="toggled" from="Settings/CheckButton" to="Settings/CheckButton" method="_on_toggled"]
 [connection signal="pressed" from="Settings/back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/HBoxContainer/Music" to="Settings/VBoxContainer/HBoxContainer/Music" method="_on_value_changed"]
+[connection signal="toggled" from="Settings/VBoxContainer/CheckButton" to="Settings/VBoxContainer/CheckButton" method="_on_toggled"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmxd6n8mkgeh2"]
+[gd_scene load_steps=15 format=3 uid="uid://cmxd6n8mkgeh2"]
 
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_23g01"]
 [ext_resource type="Script" uid="uid://c27gcv4ao1psg" path="res://Menu/intro.gd" id="1_v1ygj"]
@@ -17,6 +17,8 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.050980393, 0.07058824, 0.84313726, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bb2wu"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iee6v"]
 
@@ -83,7 +85,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v1ygj")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="background" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -92,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0jpxh")
 
-[node name="Label" type="Label" parent="."]
+[node name="title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -107,7 +109,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_bb2wu")
-theme_override_font_sizes/font_size = 38
+theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_o8rin")
 text = "
 Welcome to the game..."
@@ -115,7 +117,33 @@ horizontal_alignment = 1
 autowrap_trim_flags = 0
 justification_flags = 0
 
-[node name="next-button" type="Button" parent="Label"]
+[node name="text" type="Label" parent="title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.25
+offset_top = -255.0
+offset_right = 353.25
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.25490198, 0.25490198, 1)
+theme_override_fonts/font = ExtResource("3_bb2wu")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bb2wu")
+text = "Here, every decision you make shapes the future of your supermarket — and the planet.
+
+
+Scenario: It’s the year 2025, and your supermarket chain must reach Net Zero emissions by 2050 while keeping profits as high as possible. Every choice — from energy sources to packaging — affects your company’s finances, carbon footprint, and future sustainability.
+
+
+Your Mission: Maximize profit while achieving Net Zero CO₂ by 2050."
+autowrap_mode = 3
+
+[node name="next-button" type="Button" parent="title"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -133,7 +161,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_iee6v")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ghjlf")
 icon = ExtResource("3_wcr73")
 
-[node name="exit-button" type="Button" parent="Label"]
+[node name="exit-button" type="Button" parent="title"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.013
@@ -150,5 +178,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_bb2wu")
 icon = ExtResource("5_bb2wu")
 expand_icon = true
 
-[connection signal="pressed" from="Label/next-button" to="." method="_on_nextbutton_pressed"]
-[connection signal="pressed" from="Label/exit-button" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="title/next-button" to="." method="_on_nextbutton_pressed"]
+[connection signal="pressed" from="title/exit-button" to="." method="_on_exitbutton_pressed"]
