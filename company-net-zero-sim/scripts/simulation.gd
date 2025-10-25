@@ -1,7 +1,5 @@
 extends Node2D
 
-@onready var download: Sprite2D = $Download
-
 var current_year: int = 2025
 
 # Slider options
