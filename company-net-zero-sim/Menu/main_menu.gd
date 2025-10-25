@@ -15,7 +15,7 @@ func _ready():
 	settings.visible = false
 
 func _on_startbutton_pressed() -> void:
-	AudioGlobal.auido_click
+	AudioGlobal.click()
 	get_tree().change_scene_to_file("res://Menu/intro.tscn")
 
 
@@ -32,5 +32,6 @@ func _on_exitbutton_pressed() -> void:
 	get_tree().quit()
 
 func _on_back_pressed() -> void:
+	AudioGlobal.click()
 	settings.visible = false
 	main_buttons.visible = true
