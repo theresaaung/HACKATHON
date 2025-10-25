@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bvgwdqpyvod2k" path="res://scenes/SolarPanelOption.tscn" id="6_bjd11"]
 [ext_resource type="PackedScene" uid="uid://mjg8acdyfui8" path="res://scenes/VanOption.tscn" id="7_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cmfoo8uxdi6gs" path="res://scenes/console.tscn" id="8_jlsqs"]
-[ext_resource type="PackedScene" uid="uid://3g25oktnj01b" path="res://scenes/MoneyCounter.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" path="res://scenes/MoneyCounter.tscn" id="9_85g3d"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxtc6")
