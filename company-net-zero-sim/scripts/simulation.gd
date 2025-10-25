@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var download: Sprite2D = $Download
-@onready var auido_click: AudioStreamPlayer = $auido_click
 
 var current_year: int = 2025
 
@@ -59,7 +58,6 @@ func _process(delta: float) -> void:
 
 
 func _on_step_button_pressed() -> void:
-	auido_click.play()
 	
 	# Show random event messege
 	random_event._show_notification(random_event._random_message())
