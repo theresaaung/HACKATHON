@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c27gcv4ao1psg" path="res://Menu/intro.gd" id="1_yvecl"]
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="2_kn8ug"]
-[ext_resource type="Texture2D" path="res://Menu/arrow right copy.jpg" id="3_7ie6l"]
-[ext_resource type="Texture2D" path="res://Menu/arrow left.png" id="4_n4pu2"]
+[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://Menu/arrow_right.png" id="3_7ie6l"]
+[ext_resource type="Texture2D" uid="uid://clsf0ojnwrui" path="res://Menu/arrow_left.png" id="4_n4pu2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jpxh"]
 texture = ExtResource("2_kn8ug")

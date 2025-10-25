@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cttghhu52yep3"]
+
+[ext_resource type="AudioStream" uid="uid://cu7xci27vasjf" path="res://Button Click.mp3" id="1_w6vud"]
+
+[node name="AudioGlobal" type="Node2D"]
+
+[node name="auido_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_w6vud")
+volume_db = 7.633
