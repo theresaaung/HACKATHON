@@ -12,8 +12,11 @@ func _process(delta: float) -> void:
 
 
 func _on_backbutton_pressed() -> void:
+	AudioGlobal.click()
 	get_tree().change_scene_to_file("res://Menu/intro.tscn")
 
 
 func _on_next2_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+
+	AudioGlobal.click()
+	get_tree().change_scene_to_file("res://Menu/continue.tscn")
