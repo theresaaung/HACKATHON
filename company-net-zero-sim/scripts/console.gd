@@ -6,7 +6,7 @@ extends Node2D
 
 var feed_scroll: ScrollContainer
 var feed: VBoxContainer
-
+  
 var messages := [
 	"The local eco farm that you have been sourcing food from has got mad cow disease! Results in lower profits from less food.",
 	"Week-long storm, no sunlight for a week, cant use solar panels.",
