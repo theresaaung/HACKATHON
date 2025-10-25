@@ -16,4 +16,4 @@ func _on_exitbutton_pressed() -> void:
 
 
 func _on_nextbutton_pressed() -> void:
-	get_tree().change_scene_to_file("res://Menu/intro2.tscn")
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
