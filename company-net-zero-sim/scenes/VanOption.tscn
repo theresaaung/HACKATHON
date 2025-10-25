@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://mjg8acdyfui8"]
+[gd_scene load_steps=5 format=3 uid="uid://mjg8acdyfui8"]
 
 [ext_resource type="Script" uid="uid://d4gtsgjopmq08" path="res://scripts/button_option.gd" id="1_47gs5"]
 [ext_resource type="Texture2D" uid="uid://lqgqctgssfe0" path="res://icons/Truck icon.svg" id="2_47gs5"]
+[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="3_62cjt"]
 [ext_resource type="AudioStream" uid="uid://cu7xci27vasjf" path="res://Button Click.mp3" id="3_aimtp"]
 
 [node name="VanOption" type="Control"]
@@ -24,6 +25,7 @@ offset_left = 36.0
 offset_top = 127.0
 offset_right = 350.0
 offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("3_62cjt")
 text = "Electric Delivery Van: £20 000"
 
 [node name="EcoLabel" type="Label" parent="."]
@@ -33,7 +35,8 @@ offset_left = 36.0
 offset_top = 151.0
 offset_right = 350.0
 offset_bottom = 174.0
-text = "Eco: + 5%"
+theme_override_fonts/font = ExtResource("3_62cjt")
+text = "Eco: + 9%"
 
 [node name="QuantityLabel" type="Label" parent="."]
 layout_mode = 0
@@ -41,6 +44,7 @@ offset_left = 279.0
 offset_top = 83.0
 offset_right = 593.0
 offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("3_62cjt")
 text = "Amount: 0"
 
 [node name="Button" type="Button" parent="."]
@@ -49,6 +53,7 @@ offset_left = 279.0
 offset_top = 30.0
 offset_right = 360.0
 offset_bottom = 75.0
+theme_override_fonts/font = ExtResource("3_62cjt")
 text = "BUY"
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]

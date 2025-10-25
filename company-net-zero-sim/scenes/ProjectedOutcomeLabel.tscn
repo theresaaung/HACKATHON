@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://si0idodylfyn"]
+[gd_scene load_steps=3 format=3 uid="uid://si0idodylfyn"]
 
 [ext_resource type="Script" uid="uid://bxbqr0vvtwldp" path="res://scripts/projected_outcome_label.gd" id="1_4qua3"]
+[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="2_av0x5"]
 
 [node name="ProjectedOutcomeLabel" type="Control"]
 layout_mode = 3
@@ -24,6 +25,7 @@ offset_left = 0.87999725
 offset_top = -0.15999985
 offset_right = 198.54
 offset_bottom = 18.955
+theme_override_fonts/font = ExtResource("2_av0x5")
 theme_override_font_sizes/font_size = 30
 text = "Projected Outcome (5 years)"
 metadata/_edit_use_anchors_ = true
@@ -33,6 +35,7 @@ layout_mode = 0
 offset_top = 48.0
 offset_right = 275.0
 offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("2_av0x5")
 theme_override_font_sizes/font_size = 42
 text = "Eco Increase: "
 
@@ -41,5 +44,6 @@ layout_mode = 0
 offset_top = 120.0
 offset_right = 307.0
 offset_bottom = 199.0
+theme_override_fonts/font = ExtResource("2_av0x5")
 theme_override_font_sizes/font_size = 42
 text = "Profit Increase:"

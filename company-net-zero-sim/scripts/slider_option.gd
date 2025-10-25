@@ -11,14 +11,10 @@ var profit_percent: float = 0
 @onready var profit_percent_label: Label = $ProfitPercent
 
 
-
-
 func _on_slider_value_changed(value: float) -> void:
 	eco_percent = value * eco_mult
 	profit_percent = -value * profit_mult
 	update_labels()
-
-
 
 
 func update_labels() -> void:

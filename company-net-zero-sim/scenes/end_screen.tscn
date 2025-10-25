@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://blwc2hb0rk5jo"]
+
+[ext_resource type="Script" uid="uid://dq3t0378yiels" path="res://scenes/end_screen.gd" id="1_jc7ji"]
+[ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_kq7ac"]
+[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="2_6e1uj"]
+
+[node name="EndScreen" type="Node2D"]
+script = ExtResource("1_jc7ji")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+modulate = Color(0.42365062, 0.42365065, 0.42365062, 0.043137256)
+position = Vector2(960.0001, 540)
+scale = Vector2(0.61538464, 0.59999996)
+texture = ExtResource("1_kq7ac")
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 61.0
+offset_top = 115.0
+offset_right = 1879.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("2_6e1uj")
+theme_override_font_sizes/font_size = 66
+text = "Total Money Subtracted by Carbon Emission / 2"
+
+[node name="MoneyLabel" type="Label" parent="."]
+offset_left = 62.0
+offset_top = 315.0
+offset_right = 1880.0
+offset_bottom = 540.0
+theme_override_fonts/font = ExtResource("2_6e1uj")
+theme_override_font_sizes/font_size = 256
+text = "XXXXX"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 624.0
+offset_top = 692.0
+offset_right = 1402.0
+offset_bottom = 829.0
+theme_override_fonts/font = ExtResource("2_6e1uj")
+theme_override_font_sizes/font_size = 146
+text = "Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

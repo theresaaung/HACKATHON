@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6odmkpsmvied"]
+[gd_scene load_steps=18 format=3 uid="uid://b6odmkpsmvied"]
 
 [ext_resource type="Script" path="res://scripts/simulation.gd" id="1_nxtc6"]
 [ext_resource type="PackedScene" uid="uid://dmmrlmxp8takm" path="res://scenes/PackagingOption.tscn" id="2_jlsqs"]
@@ -10,9 +10,47 @@
 [ext_resource type="PackedScene" uid="uid://3g25oktnj01b" path="res://scenes/MoneyCounter.tscn" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://c4wusekmxx21w" path="res://scenes/RandomEvent.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://dvxl4la8ie5ia" path="res://scenes/carbon_counter.tscn" id="9_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="11_ya4ey"]
+[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="12_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://blwc2hb0rk5jo" path="res://scenes/end_screen.tscn" id="13_trceg"]
+[ext_resource type="Texture2D" uid="uid://dvmxpcmmgddk1" path="res://Menu/exit.png" id="14_a8y0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8y0u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbj1t"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 6
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxtc6")
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+modulate = Color(0.42365062, 0.42365065, 0.42365062, 0.043137256)
+position = Vector2(960.0001, 540)
+scale = Vector2(0.61538464, 0.59999996)
+texture = ExtResource("11_ya4ey")
 
 [node name="PackagingOption" parent="." instance=ExtResource("2_jlsqs")]
 offset_left = -1.0
@@ -55,6 +93,7 @@ offset_top = 823.00006
 offset_right = 31.0
 offset_bottom = 823.00006
 scale = Vector2(1.2, 1.2)
+eco_percent = 9.0
 price = 20000.0
 
 [node name="ProjectedOutcomeLabel" parent="." instance=ExtResource("5_wp0k4")]
@@ -75,20 +114,44 @@ scale = Vector2(3, 3)
 position = Vector2(1303, 527)
 
 [node name="StepButton" type="Button" parent="."]
-offset_left = 637.0
-offset_top = 631.0
-offset_right = 1193.0
-offset_bottom = 757.0
+offset_left = 657.0
+offset_top = 859.0
+offset_right = 1270.0
+offset_bottom = 985.0
+theme_override_fonts/font = ExtResource("12_eb6dy")
 theme_override_font_sizes/font_size = 86
 text = "STEP 5 YEARS"
 
 [node name="CurrentYearLabel" type="Label" parent="."]
-offset_left = 637.0
+offset_left = 592.0
 offset_top = 21.0
-offset_right = 1260.0
+offset_right = 1320.0
 offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("12_eb6dy")
 theme_override_font_sizes/font_size = 69
 text = "Current Year: 2025"
 horizontal_alignment = 1
 
+[node name="EndScreen" parent="." instance=ExtResource("13_trceg")]
+visible = false
+
+[node name="exit-button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.013
+anchor_top = 0.002
+anchor_right = 0.013
+anchor_bottom = 0.002
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 61.0
+offset_bottom = 61.820896
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a8y0u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jkv2x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jbj1t")
+icon = ExtResource("14_a8y0u")
+expand_icon = true
+
+[connection signal="update" from="SolarPanelOption" to="." method="_on_solar_panel_option_update"]
+[connection signal="update" from="VanOption" to="." method="_on_van_option_update"]
 [connection signal="pressed" from="StepButton" to="." method="_on_step_button_pressed"]
+[connection signal="pressed" from="exit-button" to="." method="_on_exitbutton_pressed"]
