@@ -44,21 +44,21 @@ offset_right = 78.0
 offset_bottom = 758.0
 
 [node name="SolarPanelOption" parent="." instance=ExtResource("6_bjd11")]
-offset_left = 638.0
-offset_top = 308.0
-offset_right = 638.0
-offset_bottom = 308.0
+offset_left = 646.0
+offset_top = 274.0
+offset_right = 646.0
+offset_bottom = 274.0
 eco_percent = 2.0
 
 [node name="VanOption" parent="." instance=ExtResource("7_qmy6f")]
-offset_left = 638.0
-offset_top = 492.0
-offset_right = 638.0
-offset_bottom = 492.0
+offset_left = 642.0
+offset_top = 482.0
+offset_right = 642.0
+offset_bottom = 482.0
 price = 20000.0
 
 [node name="MoneyCounter" parent="." instance=ExtResource("9_85g3d")]
-position = Vector2(1409, 502)
+position = Vector2(1391, 503)
 
 [node name="Node2D" parent="." instance=ExtResource("9_choun")]
 position = Vector2(873, -271)
