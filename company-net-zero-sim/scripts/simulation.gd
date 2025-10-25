@@ -25,7 +25,7 @@ var total_eco_percent: float
 var total_profit_percent: float
 
 # Total eco and money
-@export var total_money: float = 10000
+@export var total_money: float = 100000
 @export var total_carbon: float = 100000
 
 
@@ -53,9 +53,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	calculate_total_percents()
+	
+	total_money = total_money
+	
 	projected_outcome_label.update_label(total_eco_percent, total_profit_percent)
 	money_counter.update_label(total_money)
 
+	
 
 func _on_step_button_pressed() -> void:
 	
@@ -82,3 +86,11 @@ func _on_step_button_pressed() -> void:
 		# load to end screen with adjust money 
 	
 	
+
+
+func _on_solar_panel_option_update() -> void:
+	total_money -= solar_panel_option.get_price()
+
+
+func _on_van_option_update() -> void:
+	total_money -= van_option.get_price()
