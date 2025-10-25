@@ -15,9 +15,17 @@ func _process(delta: float) -> void:
 
 
 func _on_slider_value_changed(value: float) -> void:
+<<<<<<< Updated upstream
 	packaging_eco = value
 	packaging_profit = -value
 
 
 	eco_percent.text = str(packaging_eco)
 	profit_percent.text = str(packaging_profit)
+=======
+	packing_eco = value
+	packing_profit = -value
+
+
+	eco_percent.text = str(packaging_eco)
+>>>>>>> Stashed changes
