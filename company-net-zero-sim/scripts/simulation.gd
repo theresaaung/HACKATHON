@@ -13,6 +13,7 @@ extends Node2D
 # Projected outcome label
 @onready var projected_outcome_label: Control = $ProjectedOutcomeLabel
 
+@onready var money_counter: Node2D = $MoneyCounter
 
 # percent variables
 var total_eco_percent: float
@@ -40,3 +41,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	calculate_total_percents()
 	projected_outcome_label.update_label(total_eco_percent, total_profit_percent)
+	money_counter.money_contr(total_money)

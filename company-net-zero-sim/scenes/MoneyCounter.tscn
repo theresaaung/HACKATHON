@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3g25oktnj01b"]
+
+[ext_resource type="Script" uid="uid://84j6n8dq65bc" path="res://scenes/money_counter.gd" id="1_elger"]
+[ext_resource type="Texture2D" uid="uid://cd8bo42syu1fv" path="res://icons/Dollar Icon.svg" id="2_1t1rj"]
+
+[node name="MoneyCounter" type="Node2D"]
+script = ExtResource("1_elger")
+
+[node name="money_cntr" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Money"
+
+[node name="DollarIcon" type="Sprite2D" parent="."]
+position = Vector2(-20.000002, 6.000004)
+scale = Vector2(0.15068668, 0.12884171)
+texture = ExtResource("2_1t1rj")
