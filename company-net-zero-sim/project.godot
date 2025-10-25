@@ -11,13 +11,10 @@ config_version=5
 [application]
 
 config/name="Company Net Zero Sim"
-<<<<<<< Updated upstream
 run/main_scene="uid://b6odmkpsmvied"
-=======
-run/main_scene="uid://c4wusekmxx21w"
->>>>>>> Stashed changes
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<Updatedupstreamrun/main_scene="uid://b6odmkpsmvied"
 
 [display]
 

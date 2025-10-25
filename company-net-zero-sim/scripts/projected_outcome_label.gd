@@ -12,12 +12,12 @@ func _ready() -> void:
 func update_label(eco, profit):
 	if eco < 0:
 		eco_label.modulate = Color.RED
-	else:
+	elif eco > 0:
 		eco_label.modulate = Color.GREEN
 		
 	if profit < 0:
 		profit_label.modulate = Color.RED
-	else:
+	elif profit > 0:
 		profit_label.modulate = Color.GREEN
 	
 

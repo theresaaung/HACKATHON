@@ -24,7 +24,7 @@ offset_left = 0.87999725
 offset_top = -0.15999985
 offset_right = 0.67996216
 offset_bottom = 0.15999985
-text = "Projected Outcome (1 year)"
+text = "Projected Outcome (5 years)"
 metadata/_edit_use_anchors_ = true
 
 [node name="EcoLabel" type="Label" parent="."]
