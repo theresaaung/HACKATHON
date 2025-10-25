@@ -3,6 +3,7 @@ extends Node2D
 @onready var button: Button = $Button
 @onready var template_panel: PanelContainer = $PanelContainer
 @onready var template_label: Label = $PanelContainer/Label
+@onready var click: AudioStreamPlayer2D = $Click
 
 var feed_scroll: ScrollContainer
 var feed: VBoxContainer
@@ -31,6 +32,7 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	_add_notification(messages.pick_random())
+	click.play()
 
 
 func _style_template() -> void:

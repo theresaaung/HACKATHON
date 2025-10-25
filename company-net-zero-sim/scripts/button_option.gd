@@ -8,6 +8,7 @@ var quantity: int = 0
 @onready var price_label: Label = $PriceLabel
 @onready var eco_label: Label = $EcoLabel
 @onready var quantity_label: Label = $QuantityLabel
+@onready var click: AudioStreamPlayer2D = $Click
 
 
 # Called when the node enters the scene tree for the first time.
@@ -23,6 +24,7 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	quantity += 1
 	quantity_label.text = "Amount: " + str(quantity)
+	click.play()
 
 
 
