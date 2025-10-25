@@ -31,8 +31,10 @@ func _ready() -> void:
 	button.pressed.connect(_on_button_pressed)
 
 func _on_button_pressed() -> void:
+	AudioGlobal.click()
 	_add_notification(messages.pick_random())
 	AudioGlobal.click()
+	
 
 
 func _style_template() -> void:
