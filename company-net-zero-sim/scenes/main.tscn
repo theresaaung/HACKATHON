@@ -58,10 +58,10 @@ scale = Vector2(1.2, 1.2)
 price = 20000.0
 
 [node name="ProjectedOutcomeLabel" parent="." instance=ExtResource("5_wp0k4")]
-offset_left = 732.0
-offset_top = 91.0
-offset_right = 732.0
-offset_bottom = 91.0
+offset_left = 736.0
+offset_top = 235.0
+offset_right = 736.0
+offset_bottom = 235.0
 
 [node name="MoneyCounter" parent="." instance=ExtResource("9_85g3d")]
 position = Vector2(1493, 125)
@@ -72,21 +72,21 @@ position = Vector2(1480, 331.00006)
 scale = Vector2(3, 3)
 
 [node name="RandomEvent" parent="." instance=ExtResource("9_choun")]
-position = Vector2(403, 326)
+position = Vector2(1303, 527)
 
 [node name="StepButton" type="Button" parent="."]
-offset_left = 1251.0
-offset_top = 619.0
-offset_right = 1807.0
-offset_bottom = 745.0
+offset_left = 637.0
+offset_top = 631.0
+offset_right = 1193.0
+offset_bottom = 757.0
 theme_override_font_sizes/font_size = 86
 text = "STEP 5 YEARS"
 
 [node name="CurrentYearLabel" type="Label" parent="."]
-offset_left = 1253.0
-offset_top = 511.0
-offset_right = 1876.0
-offset_bottom = 790.0
+offset_left = 637.0
+offset_top = 21.0
+offset_right = 1260.0
+offset_bottom = 300.0
 theme_override_font_sizes/font_size = 69
 text = "Current Year: 2025"
 horizontal_alignment = 1

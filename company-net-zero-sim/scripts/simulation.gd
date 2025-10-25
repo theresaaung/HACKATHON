@@ -47,7 +47,7 @@ func calculate_total_percents():
 func _ready() -> void:
 	carbon_counter.update_label(total_carbon)
 	money_counter.update_label(total_money)
-	current_year_label.text = str(2025)
+	current_year_label.text = str("Current Year: " + str(current_year))
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -58,10 +58,14 @@ func _process(delta: float) -> void:
 
 
 func _on_step_button_pressed() -> void:
-	AudioGlobal.click()
-	# Show random event messege
-	random_event._show_notification(random_event._random_message())
 	
+	# Move 5 years
+	current_year += 5
+	current_year_label.text = str("Current Year: " + str(current_year))
+	
+	# Show random event messege
+	random_event.random_event_text(current_year)
+	random_event.eco_update_text()
 	# Update money
 	total_money = round(total_money * (total_profit_percent *0.01+1))
 	money_counter.update_label(str(total_money))
@@ -71,9 +75,7 @@ func _on_step_button_pressed() -> void:
 	total_carbon = round(total_carbon * (1-(total_eco_percent*0.01)))
 	carbon_counter.update_label(str(total_carbon))
 	
-	# Move 5 years
-	current_year += 5
-	current_year_label.text = str(current_year)
+
 	
 	if current_year == 2050:
 		pass
