@@ -30,7 +30,7 @@ var total_profit_percent: float
 
 
 #Random Event Console
-@onready var console: Node2D = $Node2D
+@onready var random_event: Node2D = $RandomEvent
 
 @onready var current_year_label: Label = $CurrentYearLabel
 
@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 func _on_step_button_pressed() -> void:
 	
 	# Show random event messege
-	console._show_notification(console._random_message())
+	random_event._show_notification(random_event._random_message())
 	
 	# Update money
 	total_money = round(total_money * (total_profit_percent *0.01+1))

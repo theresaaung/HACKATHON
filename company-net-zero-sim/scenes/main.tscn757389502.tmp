@@ -13,6 +13,8 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxtc6")
+total_money = null
+total_carbon = null
 
 [node name="PackagingOption" parent="." instance=ExtResource("2_jlsqs")]
 offset_left = -1.0
