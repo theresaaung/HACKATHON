@@ -1,13 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmxd6n8mkgeh2"]
+[gd_scene load_steps=11 format=3 uid="uid://bkyvnyx0d7016"]
 
-[ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_23g01"]
-[ext_resource type="Script" uid="uid://c27gcv4ao1psg" path="res://Menu/intro.gd" id="1_v1ygj"]
-[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="3_bb2wu"]
-[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://Menu/arrow_right.png" id="3_wcr73"]
-[ext_resource type="Texture2D" uid="uid://dvmxpcmmgddk1" path="res://Menu/exit.png" id="5_bb2wu"]
+[ext_resource type="Script" uid="uid://c2ol7eioyhmr7" path="res://Menu/continue.gd" id="1_k5o6f"]
+[ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="2_l5x4s"]
+[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="3_basyr"]
+[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://Menu/arrow_right.png" id="4_bx1qu"]
+[ext_resource type="Texture2D" uid="uid://clsf0ojnwrui" path="res://Menu/arrow_left.png" id="5_l5x4s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jpxh"]
-texture = ExtResource("1_23g01")
+texture = ExtResource("2_l5x4s")
 modulate_color = Color(0.6392157, 0.6392157, 0.6392157, 0.7254902)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8rin"]
@@ -46,42 +46,14 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ghjlf"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gufsy"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0, 0, 0, 0.6)
-draw_center = false
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb2wu"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.225, 0.225, 0.225, 0.6)
-draw_center = false
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 6
-
-[node name="Intro" type="Control"]
+[node name="Continue" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v1ygj")
+script = ExtResource("1_k5o6f")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -106,16 +78,14 @@ offset_bottom = 475.25
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_bb2wu")
+theme_override_fonts/font = ExtResource("3_basyr")
 theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxFlat_o8rin")
-text = "
-Welcome to the game..."
-horizontal_alignment = 1
+text = "..."
 autowrap_trim_flags = 0
 justification_flags = 0
 
-[node name="next-button" type="Button" parent="Label"]
+[node name="next2-button" type="Button" parent="Label"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -131,24 +101,25 @@ grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_iee6v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_iee6v")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ghjlf")
-icon = ExtResource("3_wcr73")
+icon = ExtResource("4_bx1qu")
 
-[node name="exit-button" type="Button" parent="Label"]
+[node name="back-button" type="Button" parent="Label"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.013
-anchor_top = 0.002
-anchor_right = 0.013
-anchor_bottom = 0.002
-offset_left = -28.6175
-offset_top = -29.651001
-offset_right = 38.3825
-offset_bottom = 38.349
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ghjlf")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gufsy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_bb2wu")
-icon = ExtResource("5_bb2wu")
-expand_icon = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -769.75
+offset_top = -90.25
+offset_right = -697.75
+offset_bottom = -27.25
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iee6v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iee6v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ghjlf")
+icon = ExtResource("5_l5x4s")
 
-[connection signal="pressed" from="Label/next-button" to="." method="_on_nextbutton_pressed"]
-[connection signal="pressed" from="Label/exit-button" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="Label/next2-button" to="." method="_on_next2_button_pressed"]
+[connection signal="pressed" from="Label/back-button" to="." method="_on_backbutton_pressed"]
