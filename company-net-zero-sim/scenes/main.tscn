@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6odmkpsmvied"]
+[gd_scene load_steps=13 format=3 uid="uid://b6odmkpsmvied"]
 
 [ext_resource type="Script" path="res://scripts/simulation.gd" id="1_nxtc6"]
 [ext_resource type="PackedScene" uid="uid://dmmrlmxp8takm" path="res://scenes/PackagingOption.tscn" id="2_jlsqs"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c4wusekmxx21w" path="res://scenes/RandomEvent.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://dvxl4la8ie5ia" path="res://scenes/carbon_counter.tscn" id="9_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="11_ya4ey"]
+[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="12_eb6dy"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxtc6")
@@ -83,18 +84,20 @@ scale = Vector2(3, 3)
 position = Vector2(1303, 527)
 
 [node name="StepButton" type="Button" parent="."]
-offset_left = 637.0
-offset_top = 631.0
-offset_right = 1193.0
-offset_bottom = 757.0
+offset_left = 657.0
+offset_top = 859.0
+offset_right = 1270.0
+offset_bottom = 985.0
+theme_override_fonts/font = ExtResource("12_eb6dy")
 theme_override_font_sizes/font_size = 86
 text = "STEP 5 YEARS"
 
 [node name="CurrentYearLabel" type="Label" parent="."]
-offset_left = 637.0
+offset_left = 592.0
 offset_top = 21.0
-offset_right = 1260.0
+offset_right = 1320.0
 offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("12_eb6dy")
 theme_override_font_sizes/font_size = 69
 text = "Current Year: 2025"
 horizontal_alignment = 1
