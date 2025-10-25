@@ -16,4 +16,4 @@ func _on_backbutton_pressed() -> void:
 
 
 func _on_next2_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Menu/continue.tscn")
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
