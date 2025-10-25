@@ -1,0 +1,7 @@
+Label      - Matches the "text" keyword.
+TextEdit
+Button
+Panel
+Label
+TextureRect
+VBoxContainer

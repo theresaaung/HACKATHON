@@ -1,0 +1,10 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1761405966
+Flowers Kingdom.ttf::FontFile::1412788146325150882::1761405259::1761405259::1::::<><><>0<>0<>a5c59defb06eb6d388e26ee29dbe4c72<>res://.godot/imported/Flowers Kingdom.ttf-7cb5fe0db74abb89f65efd0cfb44eb1b.fontdata::
+icon.svg::CompressedTexture2D::6019401962353089517::1761405259::1761405259::1::::<><><>0<>0<>12a11ee91f03fb5854cb3c81fb7afa08<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+introduction.tscn::PackedScene::6783951850836510456::1761405259::0::1::::<><><>0<>0<><>::uid://cqrgbxbcima7p::::res://supermarket.jpg<>uid://uemoc8753yb7::::res://Flowers Kingdom.ttf
+left-arrows.png::CompressedTexture2D::7754318191387120911::1761405966::1761405967::1::::<><><>0<>0<>1f7b47199f0391d8f6e039f0e2d6f0a8<>res://.godot/imported/left-arrows.png-2720d329b41e75dcab0e5e34512c2835.ctex::
+main-menu.tscn::PackedScene::808941040413944269::1761405259::0::1::::<><><>0<>0<><>::uid://cqrgbxbcima7p::::res://supermarket.jpg<>uid://se56r3ujpeoe::::res://main_menu.gd<>uid://uemoc8753yb7::::res://Flowers Kingdom.ttf
+main_menu.gd::GDScript::1273534502967673976::1761405259::0::1::::<>Control<><>0<>0<><>::
+nextButton.png::CompressedTexture2D::9166410913415042455::1761405799::1761405799::1::::<><><>0<>0<>ecfe1ce6658ad21a4668105a57ee6837<>res://.godot/imported/nextButton.png-16b846f8b07e8800eff70aa905136705.ctex::
+supermarket.jpg::CompressedTexture2D::5931324584848132143::1761405259::1761405259::1::::<><><>0<>0<>22f6d9f01ae4d69e88e2bb6f595beb82<>res://.godot/imported/supermarket.jpg-87d4c5f96214256ba94fc018f4a54b44.ctex::
