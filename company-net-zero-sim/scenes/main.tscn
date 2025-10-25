@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6odmkpsmvied"]
+[gd_scene load_steps=10 format=3 uid="uid://b6odmkpsmvied"]
 
 [ext_resource type="Script" path="res://scripts/simulation.gd" id="1_nxtc6"]
 [ext_resource type="PackedScene" uid="uid://dmmrlmxp8takm" path="res://scenes/PackagingOption.tscn" id="2_jlsqs"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bvgwdqpyvod2k" path="res://scenes/SolarPanelOption.tscn" id="6_bjd11"]
 [ext_resource type="PackedScene" uid="uid://mjg8acdyfui8" path="res://scenes/VanOption.tscn" id="7_qmy6f"]
 [ext_resource type="PackedScene" uid="uid://cmfoo8uxdi6gs" path="res://scenes/console.tscn" id="8_jlsqs"]
+[ext_resource type="PackedScene" uid="uid://3g25oktnj01b" path="res://scenes/MoneyCounter.tscn" id="9_85g3d"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxtc6")
@@ -58,3 +59,6 @@ price = 20000.0
 
 [node name="Console" parent="." instance=ExtResource("8_jlsqs")]
 position = Vector2(1501, 268)
+
+[node name="MoneyCounter" parent="." instance=ExtResource("9_85g3d")]
+position = Vector2(1252, 687)
