@@ -1,12 +1,7 @@
 extends Node2D
 
-@onready var scroll_container: ScrollContainer = $ScrollContainer
-@onready var label: Label = $Label
-@onready var eco_button: Button = $EcoButton                          
-@onready var notify_panel: PanelContainer = $PanelContainer            
-@onready var notify_label: Label = $PanelContainer/Label               
-@onready var feed_scroll: ScrollContainer = $FeedScroll
-@onready var feed: VBoxContainer = $FeedScroll/Feed
+@onready var label: Label = $Label                   
+@onready var notify_panel: PanelContainer = $PanelContainer
 
 
 var messages := [

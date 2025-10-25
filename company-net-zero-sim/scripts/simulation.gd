@@ -60,6 +60,7 @@ func _process(delta: float) -> void:
 	
 
 func _on_step_button_pressed() -> void:
+	AudioGlobal.click()
 	
 	# Move 5 years
 	current_year += 5
