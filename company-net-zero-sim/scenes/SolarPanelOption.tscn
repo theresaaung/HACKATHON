@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvgwdqpyvod2k"]
+[gd_scene load_steps=4 format=3 uid="uid://bvgwdqpyvod2k"]
 
 [ext_resource type="Texture2D" uid="uid://bp3hv0xd8tmbq" path="res://icons/Solar Panel Icon.svg" id="1_36usf"]
 [ext_resource type="Script" uid="uid://d4gtsgjopmq08" path="res://scripts/button_option.gd" id="1_miilf"]
+[ext_resource type="AudioStream" uid="uid://cu7xci27vasjf" path="res://Button Click.mp3" id="3_8ltwu"]
 
 [node name="SolarPanelOption" type="Control"]
 layout_mode = 3
@@ -49,5 +50,9 @@ offset_top = 30.0
 offset_right = 360.0
 offset_bottom = 75.0
 text = "BUY"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8ltwu")
+volume_db = 5.049
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
