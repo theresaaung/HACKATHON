@@ -1,30 +1,35 @@
 extends Node2D
 
-@onready var packaging_slider: VBoxContainer = $PackagingSlider
 
+
+@onready var packaging_option: Control = $PackagingOption
+@onready var recycling_option: Control = $RecyclingOption
 
 # Slider variables
-var eco_packaging: int
-var eco_recycling: int
-var eco_food_import: int
+
+var total_eco_percent: float
+var total_profit_percent: float
+
+
+@onready var profit: Label = $profit
+@onready var eco: Label = $eco
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-<<<<<<< Updated upstream
 	pass
-=======
-	packaging_slider.set_label("Eco Packaging")
->>>>>>> Stashed changes
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	calculate_total_percents()
+	eco.text = str(total_eco_percent)
+	profit.text = str(total_profit_percent)
+
+
+func calculate_total_percents():
+	#total_eco_percent = packaging_option.get_eco_percent() + recycling_option.get_eco_percent()
+	#total_profit_percent = packaging_option.get_profit_percent() + recycling_option.get_profit_percent()
 	pass
-<<<<<<< Updated upstream
-=======
-
-
-
-
-func 
->>>>>>> Stashed changes
