@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var label: Label = $Label                   
-@onready var notify_panel: PanelContainer = $PanelContainer
 
 
 var messages := [
