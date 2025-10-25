@@ -1,5 +1,5 @@
 extends Node2D
-
+	
 @onready var button: Button = $Button
 @onready var template_panel: PanelContainer = $PanelContainer
 @onready var template_label: Label = $PanelContainer/Label
