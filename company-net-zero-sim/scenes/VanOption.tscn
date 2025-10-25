@@ -33,7 +33,7 @@ offset_left = 36.0
 offset_top = 151.0
 offset_right = 350.0
 offset_bottom = 174.0
-text = "Eco: + 5%"
+text = "Eco: + 9%"
 
 [node name="QuantityLabel" type="Label" parent="."]
 layout_mode = 0
