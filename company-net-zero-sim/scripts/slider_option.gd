@@ -19,8 +19,6 @@ func _on_slider_value_changed(value: float) -> void:
 	update_labels()
 
 
-
-
 func update_labels() -> void:
 	if eco_percent < 0:
 		eco_percent_label.modulate = Color.RED
