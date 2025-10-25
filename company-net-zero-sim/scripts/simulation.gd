@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 
 
 func _on_step_button_pressed() -> void:
-	
+	AudioGlobal.click()
 	# Show random event messege
 	random_event._show_notification(random_event._random_message())
 	

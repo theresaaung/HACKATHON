@@ -1,6 +1,7 @@
 extends Control
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -12,12 +13,15 @@ func _ready() -> void:
 
 
 func _on_startbutton_pressed() -> void:
+	AudioGlobal.auido_click
 	get_tree().change_scene_to_file("res://Menu/intro.tscn")
 
 
 func _on_settingsbutton_pressed() -> void:
+	AudioGlobal.click()
 	pass # Replace with function body.
 
 
 func _on_exitbutton_pressed() -> void:
+	AudioGlobal.click()
 	get_tree().quit()

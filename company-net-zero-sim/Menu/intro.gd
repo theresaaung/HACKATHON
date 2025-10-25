@@ -12,8 +12,10 @@ func _process(delta: float) -> void:
 
 
 func _on_exitbutton_pressed() -> void:
+	AudioGlobal.click()
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
 
 
 func _on_nextbutton_pressed() -> void:
+	AudioGlobal.click()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
