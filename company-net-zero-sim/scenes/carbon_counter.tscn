@@ -1,15 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvxl4la8ie5ia"]
+[gd_scene load_steps=3 format=3 uid="uid://dvxl4la8ie5ia"]
 
-[ext_resource type="Texture2D" uid="uid://b5u18djxbbv1r" path="res://earth textures/Dead Earth.png" id="1_2e223"]
+[ext_resource type="Texture2D" uid="uid://ds7x07bn7csan" path="res://earth textures/Heathy Earth.png" id="1_2e223"]
+[ext_resource type="Script" uid="uid://15axua0tlyso" path="res://scenes/carbon_counter.gd" id="1_77mxj"]
 
 [node name="CarbonCounter" type="Node2D"]
+script = ExtResource("1_77mxj")
 
 [node name="CarbonLabel" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Total Carbon"
+text = "Carbon"
 
-[node name="VeryDistressedEarth" type="Sprite2D" parent="."]
-position = Vector2(49, 68)
-scale = Vector2(0.075, 0.075)
+[node name="HeathyEarth" type="Sprite2D" parent="."]
+position = Vector2(-24.999998, 12)
+scale = Vector2(0.045, 0.045)
 texture = ExtResource("1_2e223")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -49.0
+offset_top = -32.0
+offset_right = 47.0
+offset_bottom = -9.0
+text = "Total Carbon"
