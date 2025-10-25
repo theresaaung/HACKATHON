@@ -18,7 +18,7 @@ var messages := [
 	"Droughts in Spain ruin crops that the supermarket imports like tomatoes and hence price rises, availability falls and profits decline.",
 	"Political conflicts disturb shipping routes, hence imported eco crops decline and forcing the supermarket to go back to non sustainable options."
 ]
-
+ 
 func _ready() -> void:
 	_style_template()
 	template_panel.visible = false  # hide the dark rectangle
