@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmfoo8uxdi6gs"]
+[gd_scene load_steps=3 format=3 uid="uid://cmfoo8uxdi6gs"]
 
 [ext_resource type="Script" uid="uid://84j6n8dq65bc" path="res://scenes/money_counter.gd" id="1_gf67r"]
+[ext_resource type="AudioStream" uid="uid://cu7xci27vasjf" path="res://Button Click.mp3" id="2_xil4p"]
 
 [node name="Console" type="Node2D"]
+visible = false
 script = ExtResource("1_gf67r")
 
 [node name="Button" type="Button" parent="."]
@@ -28,3 +30,7 @@ offset_bottom = -184.0
 
 [node name="Feed" type="VBoxContainer" parent="FeedScroll"]
 layout_mode = 2
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_xil4p")
+volume_db = 10.097

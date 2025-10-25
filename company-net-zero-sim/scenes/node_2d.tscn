@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4wusekmxx21w"]
+[gd_scene load_steps=3 format=3 uid="uid://c4wusekmxx21w"]
+
+[ext_resource type="AudioStream" uid="uid://cu7xci27vasjf" path="res://Button Click.mp3" id="1_6e84v"]
 
 [sub_resource type="GDScript" id="GDScript_y32ns"]
 script/source = "extends Node2D
@@ -9,6 +11,7 @@ script/source = "extends Node2D
 @onready var notify_label: Label = $PanelContainer/Label               
 @onready var feed_scroll: ScrollContainer = $FeedScroll
 @onready var feed: VBoxContainer = $FeedScroll/Feed
+@onready var click: AudioStreamPlayer2D = $Click
 
 var messages := [
 	\"The local eco farm that you have been sourcing food from has got mad cow disease! Results in lower profits from less food.\",
@@ -29,6 +32,7 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	_show_notification(_random_message())
+	click.play()
 
 func _random_message() -> String:
 	return messages.pick_random()
@@ -169,12 +173,6 @@ func _on_eco_button_pressed() -> void:
 
 [node name="Node2D" type="Node2D"]
 script = SubResource("GDScript_y32ns")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 657.0
-offset_top = 785.0
-offset_right = 1034.0
-offset_bottom = 991.0
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_left = 232.0
