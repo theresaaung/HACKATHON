@@ -61,4 +61,4 @@ price = 20000.0
 position = Vector2(1330, 461)
 
 [node name="MoneyCounter" parent="." instance=ExtResource("9_85g3d")]
-position = Vector2(1164, 650)
+position = Vector2(1409, 502)
