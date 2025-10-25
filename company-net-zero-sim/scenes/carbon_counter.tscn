@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvxl4la8ie5ia"]
+
+[ext_resource type="Texture2D" uid="uid://b5u18djxbbv1r" path="res://earth textures/Dead Earth.png" id="1_2e223"]
+
+[node name="CarbonCounter" type="Node2D"]
+
+[node name="CarbonLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Total Carbon"
+
+[node name="VeryDistressedEarth" type="Sprite2D" parent="."]
+position = Vector2(49, 68)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_2e223")
