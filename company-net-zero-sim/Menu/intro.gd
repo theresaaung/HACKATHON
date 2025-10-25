@@ -18,9 +18,5 @@ func _on_exitbutton_pressed() -> void:
 
 
 func _on_nextbutton_pressed() -> void:
-<<<<<<< HEAD
 	auido_click.play()
 	get_tree().change_scene_to_file("res://Menu/intro2.tscn")
-=======
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
->>>>>>> cf911150064a5f2794a5962fc25eab19901263a3
