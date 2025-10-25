@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://si0idodylfyn" path="res://scenes/ProjectedOutcomeLabel.tscn" id="5_wp0k4"]
 [ext_resource type="PackedScene" uid="uid://bvgwdqpyvod2k" path="res://scenes/SolarPanelOption.tscn" id="6_bjd11"]
 [ext_resource type="PackedScene" uid="uid://mjg8acdyfui8" path="res://scenes/VanOption.tscn" id="7_qmy6f"]
-[ext_resource type="PackedScene" uid="uid://cmfoo8uxdi6gs" path="res://scenes/console.tscn" id="8_jlsqs"]
 [ext_resource type="PackedScene" uid="uid://3g25oktnj01b" path="res://scenes/MoneyCounter.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://c4wusekmxx21w" path="res://scenes/node_2d.tscn" id="9_choun"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nxtc6")
@@ -57,9 +57,8 @@ offset_right = 638.0
 offset_bottom = 492.0
 price = 20000.0
 
-[node name="Console" parent="." instance=ExtResource("8_jlsqs")]
-position = Vector2(1330, 461)
-script = null
-
 [node name="MoneyCounter" parent="." instance=ExtResource("9_85g3d")]
 position = Vector2(1409, 502)
+
+[node name="Node2D" parent="." instance=ExtResource("9_choun")]
+position = Vector2(873, -271)
