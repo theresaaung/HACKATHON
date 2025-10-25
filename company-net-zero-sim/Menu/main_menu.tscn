@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2no0cj3pyx2n"]
+[gd_scene load_steps=11 format=3 uid="uid://b2no0cj3pyx2n"]
 
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_ci1se"]
 [ext_resource type="Script" uid="uid://v48ca0faxqfr" path="res://Menu/main_menu.gd" id="1_dtkyu"]
 [ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="2_dtkyu"]
+[ext_resource type="Script" uid="uid://gpm0v7rafntf" path="res://Menu/check_button.gd" id="4_ohgnh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohgnh"]
 texture = ExtResource("1_ci1se")
@@ -77,6 +78,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ohgnh")
 
 [node name="MainButtons" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -159,6 +161,15 @@ text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CheckButton" type="CheckButton" parent="Settings"]
+layout_mode = 0
+offset_left = 196.25
+offset_top = 153.0
+offset_right = 848.25
+offset_bottom = 308.0
+text = "Fullscreen"
+script = ExtResource("4_ohgnh")
+
 [node name="back" type="Button" parent="Settings"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 0
@@ -180,4 +191,5 @@ text = "BACK"
 [connection signal="pressed" from="MainButtons/start-button" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="MainButtons/settings-button" to="." method="_on_settingsbutton_pressed"]
 [connection signal="pressed" from="MainButtons/exit-button" to="." method="_on_exitbutton_pressed"]
+[connection signal="toggled" from="Settings/CheckButton" to="Settings/CheckButton" method="_on_toggled"]
 [connection signal="pressed" from="Settings/back" to="." method="_on_back_pressed"]
