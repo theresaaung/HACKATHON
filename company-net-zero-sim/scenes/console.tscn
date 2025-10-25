@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cmfoo8uxdi6gs"]
 
-[ext_resource type="Script" uid="uid://bhxakgslgo06j" path="res://scenes/console.gd" id="1_gf67r"]
+[ext_resource type="Script" uid="uid://bhxakgslgo06j" path="res://scripts/console.gd" id="1_gf67r"]
 
 [node name="Console" type="Node2D"]
 script = ExtResource("1_gf67r")
