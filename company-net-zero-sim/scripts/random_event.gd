@@ -3,23 +3,25 @@ extends Node2D
 @onready var label: Label = $Label                   
 
 
-var messages := [
-	"The local eco farm that you have been sourcing food from has got mad cow disease! Results in lower profits from less food.",
-	"Week-long storm, no sunlight for a week, cant use solar panels.",
-	"The supplier of biodegradable packaging goes bankrupt. Hence, the supermarkets have to switch back to using plastic alternatives.",
-	"Recycling workers go on a strike due to low wage and hence all the recycling piles up.",
-	"A food bank that the supermarket donates to has reached capacity. Hence, unsold food needs to be thrown away increasing disposable costs.",
-	"New eco-friendly food absorbs moisture and damages food.",
-	"A fuel shortage hits the country due to which electric vans became overused and difficult to recharge causing delays.",
-	"Droughts in Spain ruin crops that the supermarket imports like tomatoes and hence price rises, availability falls and profits decline.",
-	"Political conflicts disturb shipping routes, hence imported eco crops decline and forcing the supermarket to go back to non sustainable options."
-]
+var messages := [["The local eco farm that you have been sourcing food from has got mad cow disease! Results in lower profits from less food.", 0.4, 0.3],
+	["New partnership with nearby dairy farms leading to the growth of local milk supply.", 0.2, 0.3],
+	["The supplier of biodegradable packaging goes bankrupt. Hence, the supermarkets have to switch back to using plastic alternatives.", 0.5, 0.5],
+	["Recycling workers go on a strike and hence all the recycling piles up.", 0.6, 0.4],
+	["Government subsidies announced for recycling", 0.2, 0.6],
+	["Packaging redesign reduces material use by 30%.", 0.04, 0.2],
+	["A food bank that the supermarket donates to has reached capacity. Hence, unsold food needs to be thrown away increasing disposable costs.", 0.5, 0.3], 
+	["New eco-friendly food absorbs moisture and damages food.", 0.4, 0.3],
+	["Launch “Bring Your Own Bag” campaign", 0.04, 0.2],
+	["Droughts in Spain ruin crops that the supermarket imports hence local suppy increases.", 0.2, 0.3],
+	["Political conflicts disturb shipping routes improving local sustainable options.", 0.2, 0.4]]
+
 
 func random_message() -> String:
-	var random_message = messages.pick_random()
-	messages.erase(random_message)
+	var random_list = messages.pick_random()
+	var random_message = random_list[0]
+	messages.erase(random_list)
 	if messages.size() > 0:
-		return messages.pick_random()
+		return  random_message
 	else:
 		return ""
 	
