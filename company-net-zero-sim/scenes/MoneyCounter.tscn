@@ -6,7 +6,7 @@
 [node name="MoneyCounter" type="Node2D"]
 script = ExtResource("1_elger")
 
-[node name="money_cntr" type="Label" parent="."]
+[node name="MoneyLabel" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Money"
@@ -15,3 +15,10 @@ text = "Money"
 position = Vector2(-20.000002, 6.000004)
 scale = Vector2(0.15068668, 0.12884171)
 texture = ExtResource("2_1t1rj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -49.0
+offset_top = -19.0
+offset_right = 47.0
+offset_bottom = 4.0
+text = "Total Money"

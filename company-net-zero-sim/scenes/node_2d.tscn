@@ -101,12 +101,6 @@ func _show_notification(text: String) -> void:
 [node name="Node2D" type="Node2D"]
 script = SubResource("GDScript_y32ns")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 657.0
-offset_top = 785.0
-offset_right = 1034.0
-offset_bottom = 991.0
-
 [node name="PanelContainer" type="PanelContainer" parent="."]
 offset_left = 232.0
 offset_top = 406.0
@@ -125,9 +119,3 @@ offset_bottom = 608.0
 
 [node name="Feed" type="VBoxContainer" parent="FeedScroll"]
 layout_mode = 2
-
-[node name="Click" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_6e84v")
-volume_db = 8.078
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

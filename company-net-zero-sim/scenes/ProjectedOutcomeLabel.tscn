@@ -22,22 +22,24 @@ anchor_right = 0.109541684
 anchor_bottom = 0.021148149
 offset_left = 0.87999725
 offset_top = -0.15999985
-offset_right = 0.67996216
-offset_bottom = 0.15999985
+offset_right = 198.54
+offset_bottom = 18.955
+theme_override_font_sizes/font_size = 30
 text = "Projected Outcome (5 years)"
 metadata/_edit_use_anchors_ = true
 
 [node name="EcoLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 35.0
-offset_right = 186.0
-offset_bottom = 114.0
+offset_top = 48.0
+offset_right = 275.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 42
 text = "Eco Increase: "
 
 [node name="ProfitLabel" type="Label" parent="."]
 layout_mode = 0
-offset_top = 73.0
-offset_right = 164.0
-offset_bottom = 152.0
+offset_top = 120.0
+offset_right = 307.0
+offset_bottom = 199.0
+theme_override_font_sizes/font_size = 42
 text = "Profit Increase:"
