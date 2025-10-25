@@ -1,14 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://3g25oktnj01b"]
+[gd_scene load_steps=4 format=3 uid="uid://3g25oktnj01b"]
 
 [ext_resource type="Script" uid="uid://84j6n8dq65bc" path="res://scenes/money_counter.gd" id="1_elger"]
 [ext_resource type="Texture2D" uid="uid://cd8bo42syu1fv" path="res://icons/Dollar Icon.svg" id="2_1t1rj"]
+[ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="2_rbni1"]
 
 [node name="MoneyCounter" type="Node2D"]
 script = ExtResource("1_elger")
 
 [node name="MoneyLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_top = 4.0
+offset_right = 94.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_rbni1")
 text = "Money"
 
 [node name="DollarIcon" type="Sprite2D" parent="."]
@@ -17,8 +20,9 @@ scale = Vector2(0.15068668, 0.12884171)
 texture = ExtResource("2_1t1rj")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -49.0
-offset_top = -19.0
-offset_right = 47.0
-offset_bottom = 4.0
+offset_left = -48.0
+offset_top = -15.0
+offset_right = 365.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("2_rbni1")
 text = "Total Money"
