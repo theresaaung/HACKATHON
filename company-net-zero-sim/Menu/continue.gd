@@ -17,9 +17,6 @@ func _on_backbutton_pressed() -> void:
 
 
 func _on_next2_button_pressed() -> void:
-<<<<<<< HEAD
+
 	AudioGlobal.click()
 	get_tree().change_scene_to_file("res://Menu/continue.tscn")
-=======
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
->>>>>>> 63e32a5f3bdd1eb562ec4417dd869579a5307a0b
