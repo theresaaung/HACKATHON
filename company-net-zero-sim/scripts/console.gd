@@ -33,7 +33,6 @@ func _ready() -> void:
 func _on_button_pressed() -> void:
 	AudioGlobal.click()
 	_add_notification(messages.pick_random())
-	AudioGlobal.click()
 	
 
 
