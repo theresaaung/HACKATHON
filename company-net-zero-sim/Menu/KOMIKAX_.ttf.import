@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://0sk2pkp3l3oa"
-path="res://.godot/imported/KOMIKAX_.ttf-2df55235840ddefa88f33f564f205aa4.fontdata"
+path="res://.godot/imported/KOMIKAX_.ttf-6876851938f970357738c7b71eab89fb.fontdata"
 
 [deps]
 
-source_file="res://theresa/KOMIKAX_.ttf"
-dest_files=["res://.godot/imported/KOMIKAX_.ttf-2df55235840ddefa88f33f564f205aa4.fontdata"]
+source_file="res://Menu/KOMIKAX_.ttf"
+dest_files=["res://.godot/imported/KOMIKAX_.ttf-6876851938f970357738c7b71eab89fb.fontdata"]
 
 [params]
 

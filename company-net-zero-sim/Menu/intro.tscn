@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cut6lmq7ao7f8"]
+[gd_scene load_steps=8 format=3 uid="uid://cmxd6n8mkgeh2"]
 
-[ext_resource type="Script" uid="uid://c27gcv4ao1psg" path="res://theresa/intro.gd" id="1_xg1py"]
-[ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Main Menu.png" id="2_0u6b5"]
-[ext_resource type="Texture2D" uid="uid://c844xcynwnaww" path="res://theresa/arrow right copy.jpg" id="3_ismwm"]
-[ext_resource type="Texture2D" uid="uid://4xs3ire3jcxf" path="res://theresa/arrow left.png" id="4_nbft7"]
+[ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_23g01"]
+[ext_resource type="Script" uid="uid://c27gcv4ao1psg" path="res://Menu/intro.gd" id="1_v1ygj"]
+[ext_resource type="Texture2D" uid="uid://c844xcynwnaww" path="res://Menu/arrow right copy.jpg" id="3_svrt0"]
+[ext_resource type="Texture2D" uid="uid://4xs3ire3jcxf" path="res://Menu/arrow left.png" id="4_kws7a"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jpxh"]
-texture = ExtResource("2_0u6b5")
+texture = ExtResource("1_23g01")
 modulate_color = Color(0.6392157, 0.6392157, 0.6392157, 0.7254902)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8rin"]
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xg1py")
+script = ExtResource("1_v1ygj")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -61,7 +61,7 @@ offset_top = 927.0
 offset_right = 1342.0
 offset_bottom = 995.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_03yf2")
-icon = ExtResource("3_ismwm")
+icon = ExtResource("3_svrt0")
 
 [node name="back" type="Button" parent="."]
 layout_mode = 0
@@ -70,7 +70,7 @@ offset_top = 927.0
 offset_right = 1275.0
 offset_bottom = 995.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_03yf2")
-icon = ExtResource("4_nbft7")
+icon = ExtResource("4_kws7a")
 
 [connection signal="pressed" from="next" to="." method="next_pressed"]
 [connection signal="pressed" from="back" to="." method="back_pressed"]

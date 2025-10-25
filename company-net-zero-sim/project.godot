@@ -13,7 +13,6 @@ config_version=5
 config/name="Company Net Zero Sim"
 run/main_scene="uid://cut6lmq7ao7f8"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
 <<<<<<<Updatedupstreamrun/main_scene="uid://b6odmkpsmvied"
 
 [display]
