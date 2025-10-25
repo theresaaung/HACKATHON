@@ -57,4 +57,4 @@ offset_bottom = 492.0
 price = 20000.0
 
 [node name="Console" parent="." instance=ExtResource("8_jlsqs")]
-position = Vector2(1501, 268)
+position = Vector2(1330, 461)
