@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dmmrlmxp8takm"]
+[gd_scene load_steps=0 format=3 uid="uid://dmmrlmxp8takm"]
 
 [node name="Packaging_Option" type="VBoxContainer"]
 offset_right = 250.0
