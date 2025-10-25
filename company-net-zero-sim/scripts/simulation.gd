@@ -2,6 +2,11 @@ extends Node2D
 
 var current_year: int = 2025
 
+signal send_values
+
+
+@onready var exit_button: Button = $"exit-button"
+
 # Slider options
 @onready var packaging_option: Control = $PackagingOption
 @onready var recycling_option: Control = $RecyclingOption
@@ -22,6 +27,9 @@ var current_year: int = 2025
 var total_eco_percent: float
 var total_profit_percent: float
 
+# step button
+@onready var step_button: Button = $StepButton
+
 # Total eco and money
 @export var total_money: float = 100000
 @export var total_carbon: float = 100000
@@ -31,6 +39,11 @@ var total_profit_percent: float
 @onready var random_event: Node2D = $RandomEvent
 
 @onready var current_year_label: Label = $CurrentYearLabel
+
+@onready var end_screen: Node2D = $EndScreen
+
+
+
 
 func calculate_total_percents():
 	var solar_eco_effect = (solar_panel_option.get_eco_percent() * solar_panel_option.get_quantity())
@@ -81,10 +94,21 @@ func _on_step_button_pressed() -> void:
 
 	
 	if current_year == 2050:
-		pass
-		# load to end screen with adjust money 
+		get_tree().paused = true
+		await get_tree().create_timer(1).timeout
+		
+		exit_button.visible = false
+		#step_button.MOUSE_FILTER_IGNORE
+		
+		end_screen.update_label(total_money, total_carbon)
+		end_screen.visible = true
+		#step_button.MOUSE_FILTER_PASS
+		
+		
+		
 	
 	
+
 
 
 func _on_solar_panel_option_update() -> void:
@@ -93,3 +117,7 @@ func _on_solar_panel_option_update() -> void:
 
 func _on_van_option_update() -> void:
 	total_money -= van_option.get_price()
+
+
+func _on_exitbutton_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")

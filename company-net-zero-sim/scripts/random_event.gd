@@ -38,7 +38,6 @@ func random_event_text(year) -> void:
 	await get_tree().process_frame
 	
 	
-	
 func eco_update_text() -> void:
 	var eco_value: float = _random_eco_value()
 	# Append new text
