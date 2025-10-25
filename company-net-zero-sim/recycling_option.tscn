@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://slider_option.gd" id="1_kbxti"]
 [ext_resource type="Texture2D" uid="uid://lavrehuvmvug" path="res://icons/Recycling Logo.svg" id="2_kbxti"]
-[ext_resource type="Texture2D" uid="uid://dnyitot5cjo8s" path="res://icons/Oil Drop Icon.svg" id="3_xidn2"]
+[ext_resource type="Texture2D" uid="uid://bpfxj0oo7dh8a" path="res://icons/Bin Icon.svg" id="3_kbxti"]
 
 [node name="RecyclingOption" type="Control"]
 layout_mode = 3
@@ -49,14 +49,14 @@ offset_right = 221.64
 offset_bottom = 110.64
 text = "0% Profit"
 
-[node name="PlantIcon" type="Sprite2D" parent="."]
+[node name="RecycleIcon" type="Sprite2D" parent="."]
 position = Vector2(374.99997, 69)
 scale = Vector2(0.085, 0.085)
 texture = ExtResource("2_kbxti")
 
-[node name="OilDropIcon" type="Sprite2D" parent="."]
-position = Vector2(78.64, 78.64)
+[node name="BinIcon" type="Sprite2D" parent="."]
+position = Vector2(80, 57)
 scale = Vector2(0.16, 0.16)
-texture = ExtResource("3_xidn2")
+texture = ExtResource("3_kbxti")
 
 [connection signal="value_changed" from="Slider" to="." method="_on_slider_value_changed"]
