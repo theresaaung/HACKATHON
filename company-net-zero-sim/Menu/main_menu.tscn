@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2no0cj3pyx2n"]
+[gd_scene load_steps=10 format=3 uid="uid://b2no0cj3pyx2n"]
 
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_ci1se"]
 [ext_resource type="Script" uid="uid://v48ca0faxqfr" path="res://Menu/main_menu.gd" id="1_dtkyu"]
@@ -55,6 +55,9 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rw3mj"]
+bg_color = Color(0.50731444, 0.50731444, 0.5073144, 0.92941177)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -64,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dtkyu")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Background" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,7 +76,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ohgnh")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MainButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -88,7 +91,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 12
 
-[node name="start-button" type="Button" parent="VBoxContainer"]
+[node name="start-button" type="Button" parent="MainButtons"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -102,7 +105,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ci1se")
 toggle_mode = true
 text = "START"
 
-[node name="settings-button" type="Button" parent="VBoxContainer"]
+[node name="settings-button" type="Button" parent="MainButtons"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -116,7 +119,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_dtkyu")
 toggle_mode = true
 text = "SETTINGS"
 
-[node name="exit-button" type="Button" parent="VBoxContainer"]
+[node name="exit-button" type="Button" parent="MainButtons"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -130,6 +133,51 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ohgnh")
 toggle_mode = true
 text = "EXIT"
 
-[connection signal="pressed" from="VBoxContainer/start-button" to="." method="_on_startbutton_pressed"]
-[connection signal="pressed" from="VBoxContainer/settings-button" to="." method="_on_settingsbutton_pressed"]
-[connection signal="pressed" from="VBoxContainer/exit-button" to="." method="_on_exitbutton_pressed"]
+[node name="Settings" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -488.25
+offset_top = -301.0
+offset_right = 488.25
+offset_bottom = 394.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rw3mj")
+
+[node name="Label" type="Label" parent="Settings"]
+layout_mode = 0
+offset_top = 7.0
+offset_right = 976.25
+offset_bottom = 67.5
+theme_override_fonts/font = ExtResource("2_dtkyu")
+theme_override_font_sizes/font_size = 45
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="Settings"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 0
+offset_left = 313.25
+offset_top = 608.0
+offset_right = 663.25
+offset_bottom = 678.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5882353, 0.5882353, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("2_dtkyu")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_fw3rq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fw3rq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ohgnh")
+toggle_mode = true
+text = "BACK"
+
+[connection signal="pressed" from="MainButtons/start-button" to="." method="_on_startbutton_pressed"]
+[connection signal="pressed" from="MainButtons/settings-button" to="." method="_on_settingsbutton_pressed"]
+[connection signal="pressed" from="MainButtons/exit-button" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="Settings/back" to="." method="_on_back_pressed"]

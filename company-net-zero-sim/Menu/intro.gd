@@ -17,5 +17,9 @@ func _on_exitbutton_pressed() -> void:
 
 
 func _on_nextbutton_pressed() -> void:
+<<<<<<< HEAD
 	AudioGlobal.click()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
+=======
+	get_tree().change_scene_to_file("res://Menu/continue.tscn")
+>>>>>>> 63e32a5f3bdd1eb562ec4417dd869579a5307a0b
