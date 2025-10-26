@@ -74,6 +74,10 @@ func _process(delta: float) -> void:
 	
 	projected_outcome_label.update_label(total_eco_percent, total_profit_percent)
 	money_counter.update_label(total_money)
+	
+	packaging_option.update_labels()
+	recycling_option.update_labels()
+	food_option.update_labels()
 
 	
 func _on_step_button_pressed() -> void:
@@ -108,6 +112,11 @@ func _on_step_button_pressed() -> void:
 		
 		"FOOD":
 			food_option.update_ranges(list[1], list[2])
+	
+	packaging_option.update_labels()
+	recycling_option.update_labels()
+	food_option.update_labels()
+
 
 	
 	

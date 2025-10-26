@@ -6,6 +6,7 @@ var profit_percent: float = 0
 @export var eco_mult: float
 @export var profit_mult: float
 
+@onready var slider: HSlider = $Slider
 
 @onready var eco_percent_label: Label = $EcoPercent
 @onready var profit_percent_label: Label = $ProfitPercent
@@ -46,4 +47,6 @@ func update_ranges(profit, eco):
 	profit_mult = profit
 	eco_mult = eco
 	update_labels()
+	slider.value += 1
+	slider.value -= 1
 	

@@ -42,9 +42,9 @@ func random_event_text(year) -> void:
 	
 	
 func eco_update_text() -> void:
-	var profit_value: float = random_list[1]
-	var eco_value: float = random_list[2]
-	var option: String = random_list[3]
+	profit_value = random_list[1]
+	eco_value = random_list[2]
+	option = random_list[3]
 	# Append new text
 	
 	label.text += option[0].to_upper() + option.substr(1,-1).to_lower() + " option affected range. "
