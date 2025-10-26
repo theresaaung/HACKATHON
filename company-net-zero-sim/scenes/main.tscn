@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="11_ya4ey"]
 [ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="12_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://blwc2hb0rk5jo" path="res://scenes/end_screen.tscn" id="13_trceg"]
-[ext_resource type="Texture2D" uid="uid://dvmxpcmmgddk1" path="res://buttons/quit.png" id="14_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://b2tbo2o1hrqhy" path="res://buttons/exit.png" id="14_a8y0u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8y0u"]
 

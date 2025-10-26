@@ -128,7 +128,7 @@ func _on_step_button_pressed() -> void:
 		
 		exit_button.visible = false
 		#step_button.MOUSE_FILTER_IGNORE
-		
+		get_tree().paused = false
 		end_screen.update_label(total_money, total_carbon)
 		end_screen.visible = true
 		#step_button.MOUSE_FILTER_PASS
