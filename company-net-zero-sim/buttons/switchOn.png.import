@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyihjer8dqmra"
-path="res://.godot/imported/Play Button.png-aa86f921617d8813fa617ea16ec41a5e.ctex"
+uid="uid://dcohp6s2rrwmb"
+path="res://.godot/imported/switchOn.png-ff518c1711c7ce312395d725525ab3aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/Play Button.png"
-dest_files=["res://.godot/imported/Play Button.png-aa86f921617d8813fa617ea16ec41a5e.ctex"]
+source_file="res://buttons/switchOn.png"
+dest_files=["res://.godot/imported/switchOn.png-ff518c1711c7ce312395d725525ab3aa.ctex"]
 
 [params]
 

@@ -1,5 +1,6 @@
 extends Node2D
 @onready var auido_click: AudioStreamPlayer = $auido_click
+@onready var page_flip: AudioStreamPlayer2D = $"page flip"
 
 var final_money
 
@@ -16,3 +17,6 @@ func _process(delta: float) -> void:
 
 func click():
 	auido_click.play()
+
+func play_flip():
+	page_flip.play()

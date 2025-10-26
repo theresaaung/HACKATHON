@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkyvnyx0d7016"]
+[gd_scene load_steps=19 format=3 uid="uid://bkyvnyx0d7016"]
 
 [ext_resource type="Script" uid="uid://c2ol7eioyhmr7" path="res://Menu/continue.gd" id="1_k5o6f"]
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="2_l5x4s"]
 [ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="3_basyr"]
-[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://Menu/arrow_right.png" id="4_bx1qu"]
-[ext_resource type="Texture2D" uid="uid://clsf0ojnwrui" path="res://Menu/arrow_left.png" id="5_l5x4s"]
+[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://buttons/arrow_right.png" id="4_bx1qu"]
+[ext_resource type="Texture2D" uid="uid://clsf0ojnwrui" path="res://buttons/arrow_left.png" id="5_l5x4s"]
+[ext_resource type="Texture2D" uid="uid://t10nm3ky6cm7" path="res://buttons/minimize screen.png" id="6_basyr"]
+[ext_resource type="Texture2D" uid="uid://c8tdka3jm55jy" path="res://buttons/fullscreen.png" id="7_bx1qu"]
+[ext_resource type="Texture2D" uid="uid://dvmxpcmmgddk1" path="res://buttons/quit.png" id="8_bx1qu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jpxh"]
 texture = ExtResource("2_l5x4s")
@@ -45,6 +48,22 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8auqk"]
+bg_color = Color(0.9490196, 0.9490196, 0.9490196, 0.34509805)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6s0b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcyw7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8auqk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ehpy"]
 
 [node name="Continue" type="Control"]
 layout_mode = 3
@@ -151,5 +170,58 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_iee6v")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ghjlf")
 icon = ExtResource("5_l5x4s")
 
+[node name="minimize" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -61.0
+offset_right = -76.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8auqk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t6s0b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bcyw7")
+icon = ExtResource("6_basyr")
+expand_icon = true
+
+[node name="fullscreen" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -61.0
+offset_right = -20.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8auqk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t6s0b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bcyw7")
+icon = ExtResource("7_bx1qu")
+expand_icon = true
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1677.0
+offset_top = 1015.0
+offset_right = 1795.0
+offset_bottom = 1066.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8auqk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8ehpy")
+icon = ExtResource("8_bx1qu")
+vertical_icon_alignment = 0
+expand_icon = true
+
 [connection signal="pressed" from="title/next2-button" to="." method="_on_next2_button_pressed"]
 [connection signal="pressed" from="title/back-button" to="." method="_on_backbutton_pressed"]
+[connection signal="pressed" from="minimize" to="." method="_on_minimize_pressed"]
+[connection signal="pressed" from="fullscreen" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

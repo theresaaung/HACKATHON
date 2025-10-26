@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="2_gdgr8"]
 [ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="3_tssxy"]
-[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://Menu/arrow_right.png" id="4_rwwyy"]
-[ext_resource type="Texture2D" uid="uid://clsf0ojnwrui" path="res://Menu/arrow_left.png" id="5_clvbf"]
+[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://buttons/arrow_right.png" id="4_rwwyy"]
+[ext_resource type="Texture2D" uid="uid://clsf0ojnwrui" path="res://buttons/arrow_left.png" id="5_clvbf"]
 
 [sub_resource type="GDScript" id="GDScript_56it0"]
 script/source = "extends Control
