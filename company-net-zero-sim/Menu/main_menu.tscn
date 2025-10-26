@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://gpm0v7rafntf" path="res://Menu/check_button.gd" id="4_ohgnh"]
 [ext_resource type="Texture2D" uid="uid://dcohp6s2rrwmb" path="res://Menu/switchOn.png" id="4_rw3mj"]
 [ext_resource type="Texture2D" uid="uid://bpb7lse5lrlfw" path="res://Menu/button.png" id="4_vv7ca"]
-[ext_resource type="Script" uid="uid://ceadqvfsdk6bt" path="res://Menu/music.gd" id="5_218iu"]
+[ext_resource type="Script" path="res://Menu/music.gd" id="5_218iu"]
 [ext_resource type="Texture2D" uid="uid://utu501t4gvjk" path="res://Menu/switchOff.png" id="5_cn2sd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohgnh"]

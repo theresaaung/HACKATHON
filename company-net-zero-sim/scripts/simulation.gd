@@ -45,6 +45,11 @@ var total_profit_percent: float
 
 
 
+var new_profit_value
+var new_eco_value
+var option
+
+
 func calculate_total_percents():
 	var solar_eco_effect = (solar_panel_option.get_eco_percent() * solar_panel_option.get_quantity())
 	var van_eco_effect = (van_option.get_eco_percent() * van_option.get_quantity())
@@ -71,7 +76,6 @@ func _process(delta: float) -> void:
 	money_counter.update_label(total_money)
 
 	
-
 func _on_step_button_pressed() -> void:
 	AudioGlobal.click()
 	
@@ -91,7 +95,23 @@ func _on_step_button_pressed() -> void:
 	total_carbon = round(total_carbon * (1-(total_eco_percent*0.01)))
 	carbon_counter.update_label(str(total_carbon))
 	
+	var list = random_event.get_values_to_change_option()
+	
+	
+	match list[3]:
+		
+		"PACKAGING":
+			packaging_option.update_ranges(list[1], list[2])
+			
+		"RECYCLE":
+			recycling_option.update_ranges(list[1], list[2])
+		
+		"FOOD":
+			food_option.update_ranges(list[1], list[2])
 
+	
+	
+	
 	
 	if current_year == 2050:
 		get_tree().paused = true

@@ -40,3 +40,10 @@ func get_eco_percent():
 	
 func get_profit_percent():
 	return profit_percent
+
+
+func update_ranges(profit, eco):
+	profit_mult = profit
+	eco_mult = eco
+	update_labels()
+	
