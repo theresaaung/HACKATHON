@@ -12,9 +12,8 @@ func update_label(money, carbon):
 	money_label.text = "$" + str(money-(carbon/2))
 
 
-func _on_exitbutton_pressed() -> void:
-	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")
 
 
-func _on_button_pressed() -> void:
+func _on_button_2_pressed() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Menu/main_menu.tscn")

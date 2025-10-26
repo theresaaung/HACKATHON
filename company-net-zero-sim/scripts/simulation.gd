@@ -126,11 +126,12 @@ func _on_step_button_pressed() -> void:
 		get_tree().paused = true
 		await get_tree().create_timer(1).timeout
 		
-		exit_button.visible = false
 		#step_button.MOUSE_FILTER_IGNORE
 		
-		end_screen.update_label(total_money, total_carbon)
-		end_screen.visible = true
+		AudioGlobal.final_money = total_money - total_carbon/2
+		get_tree().paused = false
+		get_tree().change_scene_to_file("res://Scenes/end_screen.tscn")
+		
 		#step_button.MOUSE_FILTER_PASS
 		
 		

@@ -1,6 +1,8 @@
 extends Node2D
 @onready var auido_click: AudioStreamPlayer = $auido_click
 
+var final_money
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
