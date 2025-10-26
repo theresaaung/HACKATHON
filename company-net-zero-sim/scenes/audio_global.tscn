@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cttghhu52yep3"]
+[gd_scene load_steps=5 format=3 uid="uid://cttghhu52yep3"]
 
 [ext_resource type="AudioStream" uid="uid://cu7xci27vasjf" path="res://Button Click.mp3" id="1_w6vud"]
-[ext_resource type="Script" path="res://scenes/audio_global.gd" id="1_yhcj0"]
+[ext_resource type="Script" uid="uid://blepg2jwaahbo" path="res://scenes/audio_global.gd" id="1_yhcj0"]
 [ext_resource type="AudioStream" uid="uid://cwdphfi6fm063" path="res://Jammin Bread - Casa Rosa's Tulum Vibes.mp3" id="3_47kxg"]
+[ext_resource type="AudioStream" uid="uid://b3yxr3xebp7lo" path="res://Menu/pageFlip.mp3" id="4_8q5jx"]
 
 [node name="AudioGlobal" type="Node2D"]
 script = ExtResource("1_yhcj0")
@@ -15,3 +16,7 @@ volume_db = 7.633
 stream = ExtResource("3_47kxg")
 autoplay = true
 bus = &"Music"
+
+[node name="page flip" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_8q5jx")
+volume_db = 0.26

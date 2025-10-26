@@ -1,14 +1,29 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmxd6n8mkgeh2"]
+[gd_scene load_steps=23 format=3 uid="uid://cmxd6n8mkgeh2"]
 
 [ext_resource type="Texture2D" uid="uid://tf778l0s6w1i" path="res://Menu/Main Menu.png" id="1_23g01"]
 [ext_resource type="Script" uid="uid://c27gcv4ao1psg" path="res://Menu/intro.gd" id="1_v1ygj"]
 [ext_resource type="FontFile" uid="uid://1c6sgc7k0jgc" path="res://Menu/pixel.ttf" id="3_bb2wu"]
-[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://Menu/arrow_right.png" id="3_wcr73"]
-[ext_resource type="Texture2D" uid="uid://dvmxpcmmgddk1" path="res://Menu/exit.png" id="5_bb2wu"]
+[ext_resource type="Texture2D" uid="uid://t10nm3ky6cm7" path="res://buttons/minimize screen.png" id="3_ghjlf"]
+[ext_resource type="Texture2D" uid="uid://crn43x56v75ss" path="res://buttons/arrow_right.png" id="3_wcr73"]
+[ext_resource type="Texture2D" uid="uid://c8tdka3jm55jy" path="res://buttons/fullscreen.png" id="4_gufsy"]
+[ext_resource type="Texture2D" uid="uid://dvmxpcmmgddk1" path="res://buttons/quit.png" id="5_bb2wu"]
+[ext_resource type="Texture2D" uid="uid://b2tbo2o1hrqhy" path="res://buttons/exit.png" id="7_gufsy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jpxh"]
 texture = ExtResource("1_23g01")
 modulate_color = Color(0.6392157, 0.6392157, 0.6392157, 0.7254902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvoau"]
+bg_color = Color(0.9490196, 0.9490196, 0.9490196, 0.34509805)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sw4w2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3w7xs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8rin"]
 bg_color = Color(1, 1, 1, 1)
@@ -76,6 +91,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 6
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gufsy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uvoau"]
+
 [node name="Intro" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -93,6 +112,44 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0jpxh")
+
+[node name="minimize" type="Button" parent="background"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -61.0
+offset_right = -76.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvoau")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sw4w2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3w7xs")
+icon = ExtResource("3_ghjlf")
+expand_icon = true
+
+[node name="fullscreen" type="Button" parent="background"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -61.0
+offset_right = -20.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvoau")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sw4w2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3w7xs")
+icon = ExtResource("4_gufsy")
+expand_icon = true
 
 [node name="title" type="Label" parent="."]
 layout_mode = 1
@@ -175,8 +232,23 @@ offset_bottom = 38.349
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ghjlf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gufsy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bb2wu")
-icon = ExtResource("5_bb2wu")
+icon = ExtResource("7_gufsy")
 expand_icon = true
 
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1677.0
+offset_top = 1015.0
+offset_right = 1795.0
+offset_bottom = 1066.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gufsy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uvoau")
+icon = ExtResource("5_bb2wu")
+vertical_icon_alignment = 0
+expand_icon = true
+
+[connection signal="pressed" from="background/minimize" to="." method="_on_minimize_pressed"]
+[connection signal="pressed" from="background/fullscreen" to="." method="_on_fullscreen_pressed"]
 [connection signal="pressed" from="title/next-button" to="." method="_on_nextbutton_pressed"]
 [connection signal="pressed" from="title/exit-button" to="." method="_on_exitbutton_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
